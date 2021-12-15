@@ -1,43 +1,83 @@
-import cont
-
-kingsley=cont.cont("kingsley","induvidual","8754554295","lastcontacted")
-kingsley.contact_open()
-kingsley.name_verificaton()
-kingsley.identity_verification()
-kingsley.mobile_verification()
-kingsley.lastcontected_verification()
-
-class personal_info(cont.cont):
-    def __init__(self,name,induvidual,phonenumber,lc):
-        super().__init__(name,induvidual,phonenumber,lc)
+class phonebook_search():
+     def __init(self,name,identity,mobilenumber,lastcontacted):
+         self.nameofcontact=name
+         self.relationship=identity
+         self.number=mobilenumber
+         self.lc=lastcontacted
 
 
-    def open_personalnfo(self):
-        print("personal info")
 
-kingsley=personal_info("kingsley","personal","8754554295","lastcontected")
-kingsley.open_personalnfo()
-kingsley.name_verificaton()
-kingsley.mobile_verification()
-kingsley.lastcontected_verification()
+     def enter_phonebook(self):
+         print("this is my phone contact")
+
+
+     def name_verifcation(self):
+         if type(self.name)==str:
+             print("this name is verified")
+         else:
+            raise TypeError("this name is not a verified name")
+
+
+     def relationship_verification(self):
+         if(self.relationship==friend):
+             print("this is friend")
+         elif(self.relatioship==family):
+                print("from familly")
+         elif(self.relatioship==professor):
+                print("this is a professor")
+
+         else:
+            print("this is a church friend")
+
+     def number_verification(self):
+         if type(self.number)==int:
+             if len(self.number)==10:
+                 print("this is a valid number")
+
+             else:
+                raise ValueError("please check the number")
+
+         else:
+            print("this is a invalid error")
+
+     def lc_verification(self):
+          if(self.lc)=="thisweek":
+        
+              print("you have contacted this week")
+          else:
+              print("contacted sme time ago")
+
+
+
+kingsley=phonebook_search("kingsley","identity",8754554295,"lc")
+kingsley.enter_phonebook()
+kingsley.name_verifcation()
+kingsley.relationship_verification()
+kingsley.number_verification()
+kingsley.lc_verification()
+
+              
+            
+                 
+
                          
 
-contacts=[{"name":"abishek","identity":"friend","mobilenumber":9936304497,"lastcontacted":"more than a week"},
-          {"name":"abinaya mam","identity":"professor","mobilenumber":9245555365,"lastcontacted":"2 days ago"},
-          {"name":"abinesh","identity":"friend","mobilenumber":6379621613,"lastcontacted":"4 hours ago"},
-          {"name":"Abishek football","identity":"friend","mobilenumber":9840237572,"lastcontacted":"more than a month"},
-          {"name":"aditiya","identity":"friend","mobilenumber":9962929509,"lastcontacted":"more than a week"},
-          {"name":"agent akash","identity":"friend","mobilenumber":9884180922,"lastcontacted":"more than a week"},
-          {"name":"agent akash","identity":"friend","mobilenumber":9884180922,"lastcontacted":"not yet called"},
-          {"name":"appa","identity":"family","mobilenumber":9444704367,"lastcontacted":"more than a week"},
-          {"name":"aswin rijo","identity":"friend","mobilenumber":9487449443,"lastcontacted":"before 6 hours"},
-          {"name":"bala","identity":"friend","mobilenumber":7448729735,"lastcontacted":"more than a week"},
-          {"name":"bercial","identity":"family","mobilenumber":7358142225,"lastcontacted":"more than a month"},
+contacts=[{"name":"abishek","identity":"friend","mobilenumber":9936304497,"lastcontacted":"this week"},
+          {"name":"abinaya mam","identity":"professor","mobilenumber":9245555365,"lastcontacted":"this week"},
+          {"name":"abinesh","identity":"friend","mobilenumber":6379621613,"lastcontacted":"this week"},
+          {"name":"Abishek football","identity":"friend","mobilenumber":9840237572,"lastcontacted":"this week"},
+          {"name":"aditiya","identity":"friend","mobilenumber":9962929509,"lastcontacted":"this week"},
+          {"name":"agent akash","identity":"friend","mobilenumber":9884180922,"lastcontacted":"this week"},
+          {"name":"agent akash","identity":"friend","mobilenumber":9884180922,"lastcontacted":"this week"},
+          {"name":"appa","identity":"family","mobilenumber":9444704367,"lastcontacted":"this week"},
+          {"name":"aswin rijo","identity":"friend","mobilenumber":9487449443,"lastcontacted":"this week"},
+          {"name":"bala","identity":"friend","mobilenumber":7448729735,"lastcontacted":"this week"},
+          {"name":"bercial","identity":"family","mobilenumber":7358142225,"lastcontacted":"this week"},
           {"name":"barath","identity":"friend","mobilenumber":7092028571,"lastcontacted":"more than a month"},
-          {"name":"bhuvanesh","identity":"friend","mobilenumber":94865531514,"lastcontacted":"2 weeks ago"},
+          {"name":"bhuvanesh","identity":"friend","mobilenumber":94865531514,"lastcontacted":"this week"},
           {"name":"bharath disys","identity":"family","mobilenumber":984412975,"lastcontacted":"a day ago"},
-          {"name":"bryan","identity":"friend","mobilenumber":97104667134,"lastcontacted":"more than a year"},
-          {"name":"chitti","identity":"family","mobilenumber":9003295352,"lastcontacted":"more than a month"},
+          {"name":"bryan","identity":"friend","mobilenumber":97104667134,"lastcontacted":"this week"},
+          {"name":"chitti","identity":"family","mobilenumber":9003295352,"lastcontacted":"this week"},
           {"name":"damodharan","identity":"riend","mobilenumber":9486889280,"lastcontacted":"more than 2 months"},
           {"name":"deepak disys","identity":"friend","mobilenumber":9843130762,"lastcontacted":"2 days ago"},
           {"name":"derick","identity":"friend","mobilenumber":6383173625,"lastcontacted":"more than a month"},
@@ -56,11 +96,11 @@ contacts=[{"name":"abishek","identity":"friend","mobilenumber":9936304497,"lastc
           {"name":"harrikrishanan","identity":"friend","mobilenumber":8610408567,"lastcontacted":"more than a week"},
           {"name":"hod cse","identity":"professor","mobilenumber":9894204992,"lastcontacted":"2 days ago"},
           {"name":"immaculate","identity":"friend","mobilenumber":9500700199,"lastcontacted":"more than a year"},
-          {"name":"immanuael","identity":"schoolfriend","mobilenumber":6379165794,"lastcontacted":"5 minutes ago"},
+          {"name":"immanuael","identity":"friend","mobilenumber":6379165794,"lastcontacted":"5 minutes ago"},
           {"name":"jagan","identity":"friend","mobilenumber":6385733012,"lastcontacted":"more than a week"},
           {"name":"jaswanth","identity":"friend","mobilenumber":89394992,"lastcontacted":"more than a week"},
           {"name":"jeffery officail","identity":"friend","mobilenumber":9941013193,"lastcontacted":"1 hour ago"},
-          {"name":"jeffrey bro","identity":"friend brother","mobilenumber":9941072962,"lastcontacted":"more than a week"},
+          {"name":"jeffrey bro","identity":"friend ","mobilenumber":9941072962,"lastcontacted":"more than a week"},
           {"name":"jegan bro","identity":" family friend","mobilenumber":93611151281,"lastcontacted":"more than a week"},
           {"name":"jeni ece","identity":"friend","mobilenumber":7305506899,"last contacted":"2 hours ago"},
           {"name":"jeremy","identity":"friend","mobilenumber":7871436021,"last contacted":"more than a month"},
@@ -156,6 +196,20 @@ for i in contacts:
     for j,k in i.items():
         print(f"{j}:{k}")
             
+        
+
+
+
+
+          
+          
+          
+          
+          
+
+
+
+
         
 
 
